@@ -13,15 +13,21 @@ const routes = [
     component: () => import( '../Layout/NavBar.vue')
   },
   {
+    path: '/signup',
+    name: 'signup',
+    component: () => import('../components/SignUp.vue')
+  },
+  {
     path: '/signin',
     name: 'signin',
     component: () => import( '../components/SignIn.vue')
   },
   {
-    path: '/signup',
-    name: 'signup',
-    component: () => import('../components/SignUp.vue')
+    path: '/forgot',
+    name: 'forgot',
+    component: () => import('../components/Forgot.vue')
   },
+  
   {
     path: '/dashboard',
     name: 'dashboard',

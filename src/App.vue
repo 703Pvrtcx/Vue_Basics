@@ -10,7 +10,6 @@
     data(){
     return {
       apiUrl: 'http://localhost:8000/api',
-      // user: null,
     }
   },
  async created(){
@@ -21,7 +20,6 @@
             }
        });
        this.$store.dispatch('user', response.data);
-    // this.user = response.data;
   }
 }  
 </script>

@@ -42,17 +42,20 @@ import { mapGetters } from 'vuex';
     },
     methods: {
         async handleClick(){
-            const response = await axios.post(`${this.apiUrl}/logout`,
+          
+            const response = await axios.post(`${this.apiUrl}/logout`,{},
            {   
             headers: {
               "Accept":"application/json",    
               Authorization: 'Bearer ' + localStorage.getItem('token')
             }
            });
-           console.log(response); 
+           console.log('Success: ',response.data.token);
+           this.$store.dispatch('user',null);
            localStorage.removeItem('token');
-           this.$router.push('/singin');  
+           this.$router.push('/');  
         }
+        
     },
     computed:{
         ...mapGetters(['user']),

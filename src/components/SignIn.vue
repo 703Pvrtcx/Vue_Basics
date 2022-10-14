@@ -19,10 +19,18 @@
           </div>
 
           <button class="btn btn-primary btn-block">Login</button>
-        
-        </form>
-        Create a new account<router-link class="link" to="/signup">Sign Up</router-link>
-    </div>
+
+          <p class="forgot-password text-right">
+            <router-link to="/forgot">Forgot Password</router-link>
+          </p>
+      
+
+        </form> 
+          <p class="mt-4">
+             Create a new account <router-link class="link" to="/signup">Sign Up</router-link>
+        </p>
+      </div>
+     
    </div>
   </template> 
   
