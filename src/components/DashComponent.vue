@@ -9,10 +9,6 @@
                 </button>     
                 <div  class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                       
-                      <li class="nav-item"  v-if="user">
-                            <router-link class="nav-link" to="/">Profile</router-link>
-                        </li>
                         <li class="nav-item"  v-if="user">
                             <a class="nav-link" href="javascript:void(0)" @click="handleClick" >Sign out</a>
                         </li>
@@ -24,6 +20,7 @@
       <div class="auth-inner">
         <div v-if="user">
           <h3> Hi, {{user.name}}</h3>
+            <p>{{user.email}}</p>
             <p>This is Dashboard</p>
         </div>
         <div v-if="!user">
@@ -38,13 +35,12 @@
   
   <script>
   import axios from 'axios';
-// import { mapGetters } from 'vuex';
   export default {
     name: "DashComponent",
     props: ['user'],
     data(){
         return {
-            apiUrl: 'http://localhost:8000/api',
+          apiUrl: 'http://localhost:8000/api',
         }
     },
     methods: {
@@ -61,9 +57,6 @@
            this.$router.push('/');  
         }
     },
-    // computed: {
-    //   ...mapGetters(['user'])
-    // }
 }
   </script>
   

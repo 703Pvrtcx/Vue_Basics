@@ -50,8 +50,9 @@
            console.log('Success: ',response.data.user);
 
            localStorage.setItem('token',response.data.token);
-// 
-          //  this.$store.dispatch('user',response.data)
+          
+           this.$store.dispatch('user',response.data);
+           
           
            this.$router.push('/dashboard');   
         }   

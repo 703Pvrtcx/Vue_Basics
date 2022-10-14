@@ -1,5 +1,4 @@
 <template>
-  <!-- <router-view/> --> 
   <router-view :user="user" />
 </template>
 
@@ -22,8 +21,6 @@
             }
        });
     this.user = response.data;
-    // this.$store.dispatch('user',response.data)
-    // console.log(this.user);
   }
 }  
 </script>
@@ -41,7 +38,8 @@ body{
   background-repeat: no-repeat, repeat;
   background-position: center; /* Center the image */
   background-size: cover; /* Resize the background image to cover the entire */
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: 100%;
   display: flex;
   font-weight: 400;
   font-family: 'Fira Sans',sans-serif;
@@ -109,4 +107,4 @@ body,html,#app,#root, .auth-wrapper{
     color: #167bff;
   }
 
-</style>
+</style> 

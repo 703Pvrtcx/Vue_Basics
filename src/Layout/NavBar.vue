@@ -31,7 +31,6 @@
 </template>
   <script>
   import axios from 'axios';
-//  import { mapGetters } from 'vuex';
 
   export default {
     name: 'NavBar',
@@ -41,7 +40,6 @@
             apiUrl: 'http://localhost:8000/api',
         }
     },
-
     methods: {
         async handleClick(){
             const response = await axios.post(`${this.apiUrl}/logout`,
@@ -52,14 +50,10 @@
             }
            });
            console.log(response); 
-        //    this.user = response.data
            localStorage.removeItem('token');
            this.$router.push('/singin');  
         }
     },
-    // computed: {
-    //     ...mapGetters(['user'])
-    // }
   }
   </script>
   <style scoped>
