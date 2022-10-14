@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+cd vue_basics
 npm install
 ```
 
@@ -20,5 +21,18 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Connect To Laravel Backend and XAMMP
+```
+cd ..
+-> git clone https://github.com/703Pvrtcx/exigent_authentication.git 
+-> Start XAMMP
+    Myphp Admin
+    create new Database 'laravel'
+copy .env.example
+paste and remove .example
+new file .env
+    .env 
+        DB_DATABASE=laravel
+php artisan serve
+
+```
