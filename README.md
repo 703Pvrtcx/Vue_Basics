@@ -1,4 +1,4 @@
-# vue-authentication
+# vue_basics
 Full Stack Laravel Api with Vue.js Frontend
 
 ## Project setup Frontend
