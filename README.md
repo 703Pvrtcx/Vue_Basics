@@ -1,6 +1,7 @@
 # vue-authentication
+Full Stack Laravel Api with Vue.js Frontend
 
-## Project setup
+## Project setup Frontend
 ```
 cd vue_basics
 npm install
@@ -21,9 +22,8 @@ npm run build
 npm run lint
 ```
 
-### Connect To Laravel Backend and XAMMP
+### Project Setup Backend
 ```
-cd ..
 -> git clone https://github.com/703Pvrtcx/exigent_authentication.git 
 -> Start XAMMP
     Myphp Admin
@@ -33,6 +33,9 @@ paste and remove .example
 new file .env
     .env 
         DB_DATABASE=laravel
-php artisan serve
+```
 
+### Run Development Server
+```
+php artisan serve
 ```
