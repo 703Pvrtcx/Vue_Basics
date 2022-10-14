@@ -31,10 +31,10 @@
 </template>
   <script>
   import axios from 'axios';
+import { mapGetters } from 'vuex';
 
   export default {
     name: 'NavBar',
-    props: ['user'],
     data(){
         return {
             apiUrl: 'http://localhost:8000/api',
@@ -54,6 +54,9 @@
            this.$router.push('/singin');  
         }
     },
+    computed:{
+        ...mapGetters(['user']),
+    }
   }
   </script>
   <style scoped>

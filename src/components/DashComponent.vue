@@ -35,9 +35,9 @@
   
   <script>
   import axios from 'axios';
+import { mapGetters } from 'vuex';
   export default {
     name: "DashComponent",
-    props: ['user'],
     data(){
         return {
           apiUrl: 'http://localhost:8000/api',
@@ -53,10 +53,14 @@
             }
            });
            console.log('Success: ',response.data.token);
+           this.$store.dispatch('user',null);
            localStorage.removeItem('token');
            this.$router.push('/');  
         }
     },
+    computed:{
+        ...mapGetters(['user']),
+    }
 }
   </script>
   

@@ -1,5 +1,5 @@
 <template>
-  <router-view :user="user" />
+  <router-view />
 </template>
 
 <script>
@@ -10,7 +10,7 @@
     data(){
     return {
       apiUrl: 'http://localhost:8000/api',
-      user: null,
+      // user: null,
     }
   },
  async created(){
@@ -20,7 +20,8 @@
               Authorization: 'Bearer ' + localStorage.getItem('token')
             }
        });
-    this.user = response.data;
+       this.$store.dispatch('user', response.data);
+    // this.user = response.data;
   }
 }  
 </script>

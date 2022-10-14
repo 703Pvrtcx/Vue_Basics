@@ -1,2 +1,3 @@
-// import axios from 'axios'
-// axios.defaults.baseURL = 'http://localhost:8000/';
+import axios from 'axios'
+axios.defaults.baseURL = 'http://localhost:8000/';
+axiox.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('token');

@@ -1,6 +1,6 @@
 <template>
    <div id="app">
-    <NavBar :user="user" />
+    <NavBar />
     <div class="auth-wrapper">
       <div class="auth-inner">
         <div v-if="user">
@@ -16,12 +16,15 @@
 </template>
 <script>
 import NavBar from '@/Layout/NavBar.vue';
+import { mapGetters } from 'vuex';
 export default {
   name: 'HomeView',
   components: {
     NavBar,
   },
-  props: ['user'],
+  computed:{
+        ...mapGetters(['user']),
+    }
 }
 </script>
 
